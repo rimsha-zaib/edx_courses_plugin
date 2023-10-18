@@ -68,6 +68,7 @@ class CookiecutterCoursesConfig(AppConfig):
 
 
 
+
     # plugin_app = {
     #     PluginURLs.CONFIG: {
     #         ProjectType.LMS: {
