@@ -157,11 +157,10 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.8',
     ],
+    
     entry_points={
         "lms.djangoapp": [
             "cookiecutter_courses = cookiecutter_courses.apps:CookiecutterCoursesConfig",
         ],
-        "cms.djangoapp": [
-        ],
-    }
+    },
 )
