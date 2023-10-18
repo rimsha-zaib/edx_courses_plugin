@@ -22,7 +22,7 @@ from edx_django_utils.plugins.constants import (
 ​
 from openedx.core.djangoapps.plugins.constants import ProjectType
 ​
-class ListAndFilterConfig(AppConfig):
+class CookiecutterCoursesConfig(AppConfig):
     """
     Configuration for the list_and_filter Django application.
     """
@@ -38,14 +38,3 @@ class ListAndFilterConfig(AppConfig):
             }
         }
     }
-
-
-    # plugin_app = {
-    #     PluginURLs.CONFIG: {
-    #         ProjectType.LMS: {
-    #             PluginURLs.NAMESPACE: 'cookiecutter_courses',
-    #             PluginURLs.REGEX: r'^api/cookiecutter_courses/',
-    #             PluginURLs.RELATIVE_PATH: 'urls',
-    #         }
-    #     }
-    # }
