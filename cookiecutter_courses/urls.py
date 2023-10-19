@@ -9,6 +9,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path(
         'list/', get_courses, name='get_courses_list'
-    ),
-    path('v1/list/', CourseListAPIView.as_view(), name='courselist')
+    )
 ]
