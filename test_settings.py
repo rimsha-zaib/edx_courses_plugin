@@ -64,5 +64,4 @@ TEMPLATES = [{
     },
 }]
 
-
 DEBUG = True

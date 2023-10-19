@@ -14,27 +14,34 @@
 
 
 ​
-from django.apps import AppConfig
-​
-from edx_django_utils.plugins.constants import (
-    PluginURLs
-)
-​
-from openedx.core.djangoapps.plugins.constants import ProjectType
-​
+from django.apps import AppConfig​
 class CookiecutterCoursesConfig(AppConfig):
     """
     Configuration for the list_and_filter Django application.
     """
 ​
     name = 'cookiecutter_courses'
-​
     plugin_app = {
-        PluginURLs.CONFIG: {
-            ProjectType.LMS: {
-                PluginURLs.NAMESPACE: 'cookiecutter_courses',
-                PluginURLs.REGEX: r'^api/cookiecutter_courses/',
-                PluginURLs.RELATIVE_PATH: 'urls',
+        'url_config': {
+            'lms.djangoapp': {
+                'namespace': 'cookiecutter_courses',
+                'relative_path': 'urls',
             }
-        }
-    }
+        },
+        'settings_config': {
+            'lms.djangoapp': {
+                'common': {'relative_path': 'settings'},
+            }
+        },
+    } 
+
+​
+    # plugin_app = {
+    #     PluginURLs.CONFIG: {
+    #         ProjectType.LMS: {
+    #             PluginURLs.NAMESPACE: 'cookiecutter_courses',
+    #             PluginURLs.REGEX: r'^api/cookiecutter_courses/',
+    #             PluginURLs.RELATIVE_PATH: 'urls',
+    #         }
+    #     }
+    # }
