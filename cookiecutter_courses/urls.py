@@ -10,3 +10,4 @@ urlpatterns = [
         'list/', get_courses, name='get_courses_list'
     )
 ]
+#helllo
